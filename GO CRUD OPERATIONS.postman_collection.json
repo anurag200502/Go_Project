@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "65ff1b5f-241a-4f08-a397-b783f3314c2e",
+		"name": "GO CRUD OPERATIONS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25547366"
+	},
+	"item": [
+		{
+			"name": "CREATE OPERATION",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"repairID\": \"12345\",\r\n    \"deviceName\": \"LaptopXYZ\",\r\n    \"status\": \"In Progress\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/repair/submit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"repair",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ OPERATION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/repairs/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"repairs",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE OPERATION",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"repairID\": \"201367006\",\r\n    \"customerName\": \"Zopsmart\",\r\n    \"deviceName\": \"Apple Macbook 2023\",\r\n    \"status\": \"Completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/repairs/list/201367005",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"repairs",
+						"list",
+						"201367005"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE OPERATION",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/repair/delete/201367006",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"repair",
+						"delete",
+						"201367006"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
